@@ -32,9 +32,48 @@
 编码方式：灰度图(黑白),RGB,CMYK...
 
 ---
-# Harris 窗口提取特征
-图像I中,(u,v)处的Harris特征值为：
-记在图像I中，$a + b$
+# Harris 特征
+在图像$I$中,记点$(x,y)$的亮度为$I(x,y)$.则其与附近某点$(x+u,y+v)$的亮度差可以用下式衡量:
+$$\small \Delta^2I=[I(x+u,y+v)-I(x,y)]^2$$
+在某片区域$D$中所有像素与与之相差向量$(u,v)$的对应点亮度之差的大小可以用下式衡量:
+$$\small E(u,v)=\sum_{(x,y)\in D} w(x,y)[I(x+u,y+v)-I(x,y)]^2$$
+其中$w(x,y)$是权重因子.
+
+---
+#### (接上)Harris 特征
+将$\small I(x+u,y+v)$在$(x,y)$处泰勒展开,取一阶近似,有:
+$$\small\begin{matrix}
+\Delta^2I=[I(x+u,y+v)-I(x,y)]^2 \\  
+\approx [I(x,y)+uI_x+vI_y-I(x,y)]^2 \\
+= [uI_x+vI_y]^2 \\
+=u^2I_x^2+2uI_xvI_y+v^2I_y^2 \\
+=\begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}\begin{bmatrix}u\\v\end{bmatrix}
+\end{matrix}$$
+其中$I_x,I_y$分别为图像亮度在$(x,y)$处$x,y$方向上的梯度.
+
+---
+#### (接上)Harris 特征
+因此有:
+$$\small\begin{matrix}
+\small E(u,v)=\sum_{(x,y)\in D} w(x,y)[I(x+u,y+v)-I(x,y)]^2\\
+\approx \sum_{(x,y)\in D} w(x,y) \begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}\begin{bmatrix}u\\v\end{bmatrix}\\
+=\begin{bmatrix}u&v\end{bmatrix}
+\left(\sum_{(x,y)\in D} w(x,y) \begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}
+\right)\begin{bmatrix}u\\v\end{bmatrix}
+\end{matrix}$$
+令$\small M=\sum_{(x,y)\in D} w(x,y) \begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}$
+
+---
+#### (接上)Harris 特征
+对于矩阵$M$的两个特征根$\small (\lambda_1,\lambda_2)$,
+$$\small E(u,v)=\begin{bmatrix}u&v\end{bmatrix}M\begin{bmatrix}u\\v\end{bmatrix}=u^2\lambda_1+v^2\lambda_2$$
+
+![70%](http://docs.opencv.org/3.0-beta/_images/harris_region.jpg)
+
+---
+
+
+
 <img src="http://chart.googleapis.com/chart?cht=tx&chl= x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" style="border:none;">
 
 ![150%](http://docs.opencv.org/3.0-beta/_images/math/cc8a8a5c46a36cdc6ee1f6a90221eb5505a466b1.png)
