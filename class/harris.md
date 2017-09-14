@@ -34,6 +34,8 @@
 ---
 # Harris 窗口提取特征
 图像I中,(u,v)处的Harris特征值为：
+记在图像I中，$a + b$
+<img src="http://chart.googleapis.com/chart?cht=tx&chl= x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" style="border:none;">
 
 ![150%](http://docs.opencv.org/3.0-beta/_images/math/cc8a8a5c46a36cdc6ee1f6a90221eb5505a466b1.png)
 
