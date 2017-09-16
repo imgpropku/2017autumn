@@ -69,6 +69,7 @@ $$\small\begin{matrix}
 $$\small E(u,v)=\begin{bmatrix}u&v\end{bmatrix}M\begin{bmatrix}u\\v\end{bmatrix}=u^2\lambda_1+v^2\lambda_2$$
 
 ![70%](http://docs.opencv.org/3.0-beta/_images/harris_region.jpg)
+$\lambda_1,\lambda_2$分别是$u,v$方向的系数.
 
 ---
 
