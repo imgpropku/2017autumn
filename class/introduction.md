@@ -127,8 +127,14 @@ im_PIL.show() #显示图片
 
 ---
 # 操作演示
-- python环境配置与jupyter notebook基本操作
+- 环境配置
+  - 推荐工具:choco(windows)
+  https://chocolatey.org/install
+- jupyter notebook基本操作
+  - pip(pip3) install jupyter
+  http://jupyter.org/install.html
 - Pillow与numpy处理图像操作
+- opencv图像基本操作
 
 ---
 # 作业1-图片的基本操作
