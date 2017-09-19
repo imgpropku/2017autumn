@@ -127,6 +127,7 @@ im_PIL.show() #显示图片
 
 ---
 # 操作演示
+- 资料查找的正确姿势
 - 环境配置
   - 推荐工具:choco(windows)
   https://chocolatey.org/install
