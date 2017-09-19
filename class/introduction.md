@@ -7,13 +7,11 @@
 <br/><br/>
 崔家梁
 (cuijialiang@pku.edu.cn)  
-2017年9月
 
 ---
 # 课程简介
 
-《遥感数字图像处理原理(赵红颖副教授)》课程
-的**实验课**
+《遥感数字图像处理原理(赵红颖副教授)》课程的**实验课**
 
 两周一次
 
@@ -21,9 +19,9 @@
 https://github.com/imgpropku/2017autumn
 
 ---
-# 需要先修的内容
+# 实验课需要先修的内容
 
-- 计算概论、数据结构与算法、程序设计原理等计算机基础课
+- 计算概论、数据结构与算法、程序设计原理等计算机基础课  
 - 掌握python语言基本操作
 
 ---
@@ -31,13 +29,14 @@ https://github.com/imgpropku/2017autumn
 # 课程内容
 
 1-图像处理基本操作  
-2-傅里叶变换与逆变换(蝶形算法)  
-3-几何变换  
-4-图像增强(直方图、滤波器)  
-5-图像边缘检测、二值化和轮廓提取与跟踪  
-6-数字形态学运算  
+2-图像傅里叶变换  
+3-角点检测  
+4-模板操作  
+5-深度学习图像处理简介(待定)  
+6-深度学习工具简介(待定)   
+7-深度学习图像处理示例(待定)  
 
-### 注重算法实现
+#### 本课程注重算法的实现
 
 ---
 # 开发环境-上课demo
@@ -51,36 +50,33 @@ jupyter-notebook(安装方式:pip install notebook)
 
 ---
 # 提交作业可选的开发环境:
-- Python3 或 jupyter-nb(py3) (推荐):smiley:;
-- C++(gcc:smiley: 或 clang:smiley:, **拒绝VC&.NET**:imp:);
-- Matlab (接受但不推荐):expressionless:.
+- Python3 或 jupyter-nb(py3) (推荐):smiley:;  
+- C++(gcc:smiley: 或 clang:smiley:, **拒绝  VC&.NET**:imp:);  
+- Matlab (接受但不推荐):expressionless:.  
 
 ---
 # 作业
-- 小作业
-  - 个人
-  - 编程实现简单的图像处理算法
-  - **每节课都有**
-- 大作业
-  - 3～4人一组
-  - 小组为单位实现一个较为复杂的图像处理算法
+- 小作业  
+  - 个人  
+  - 编程实现简单的图像处理算法  
+  - **每节课都有**  
+- 大作业  
+  - 多人合作  
+  - 实现一个较为复杂的图像处理算法  
 ---
 
 # 小作业提交格式:
 
 按照作业提交示例.  
 
-作业提交DDL,上课当天23:59分.
-
----
-# 大作业说明:
+作业提交DDL,下一次实验课上课前一天的23:59分之前.
 
 ---
 # 自我介绍
 <br/><br/>
 ### **崔家梁**  
 
-遥感专业2016硕  
+遥感专业2016硕,GIS班12本  
 研究方向：图像、视频处理  
 实验室：遥感楼505  
 手机&微信：18811324609  
@@ -96,7 +92,6 @@ jupyter-notebook(安装方式:pip install notebook)
 <br/><br/>
 崔家梁
 (cuijialiang@pku.edu.cn)  
-2017年9月
 
 ---
 # 位图文件(Bitmap)
@@ -105,7 +100,7 @@ jupyter-notebook(安装方式:pip install notebook)
 常见的位图文件：BMP,PNG,GIF,TIFF...
 编码方式：灰度图(黑白),RGB,CMYK...
 
-![80%](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Rgb-raster-image.svg/368px-Rgb-raster-image.svg.png)
+![80%](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Rgb-raster-image.svg/368px-Rgb-raster-image.svg.png)通常使用8位五符号整形存储
 
 ---
 # 位图文件(Bitmap)
@@ -131,13 +126,16 @@ im_PIL.show() #显示图片
 ```
 
 ---
-# Pillow与numpy图片基本操作（演示程序）
+# 操作演示
+- python环境配置与jupyter notebook基本操作
+- Pillow与numpy处理图像操作
 
 ---
 # 作业1-图片的基本操作
-- 打开一张**彩色**图片;
-- 对其进行8邻域中位数滤波并保存结果到一个文件;
-- 将原始图片转换成灰度图像,并用Prewitt算子对其进行边缘检测滤波,并将结果保存成一个文件;  
-**Prewitt算子:**  
-![200%](https://render.githubusercontent.com/render/math?math=%5Cbegin%7Bbmatrix%7D0%26amp%3B1%26amp%3B0%5C%5C1%26amp%3B-4%26amp%3B1%5C%5C0%26amp%3B1%26amp%3B0%5Cend%7Bbmatrix%7D&mode=display)  
-请于今晚23:59分前提交至 cuijialiang@pku.edu.cn
+#### 编程实现以下内容:
+- 打开一张**彩色**图片;  
+- 将其红蓝波段对调,得到假彩色合成结果并显示;  
+- 将上一步得到的结果旋转45度并显示(选作);  
+- 将最终得到的结果保存成文件. 
+<br/>
+请于2017年9月27日北京时间上午10点之前提交至 cuijialiang@pku.edu.cn,收到回复为准.
