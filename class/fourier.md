@@ -9,6 +9,11 @@
 (cuijialiang@pku.edu.cn)  
 
 ---
+# 关于本讲义
+如果你在github上查看不了公式,建议使用chrome浏览器的GitHub with MathJax插件  
+https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllaclgeombjnmnbima?hl=en
+
+---
 # 相关概念
 - 欧拉公式
 $$e^{ix} = cosx+isinx$$
