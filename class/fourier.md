@@ -78,7 +78,7 @@ $$\tiny \begin{bmatrix} \hat{x}[0] \\ \hat{x}[1] \\ \vdots \\ \hat{x}[N-1]\end{b
 \\ \vdots & \vdots & \ddots & \vdots
 \\ W_N^{(N-1)*0} & W_N^{(N-1)*1} & \cdots & W_N^{(N-1)*(N-1)}
 \end{bmatrix}
-\begin{bmatrix} x[0] \\ x[1] \\\ \vdots \\ x[N-1]\end{bmatrix}$$
+\begin{bmatrix} x[0] \\ x[1] \\ \vdots \\ x[N-1]\end{bmatrix}$$
 
 上面这个算式的计算复杂度是$O(N^2)$
 
