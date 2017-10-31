@@ -1,4 +1,4 @@
-///////////////;<!-- page_number: true -->
+<!-- page_number: true -->
 <!--$theme: gaia-->
 
 　
@@ -80,21 +80,6 @@ $$R=det(M)-k(trace(M))^2$$
 - 当R很大时,通常$\lambda_1$,$\lambda_2$都很大,此时是角点.
 
 因此是否是角点可以通过判断$R$确定.
-
----
-# 位图打开方式
-#### 1.直接从二进制文件打开,读取元数据、数据数组
-- 需要预先知道结构信息
-
-**有兴趣的同学可以尝试一下**(不要求)
-
-#### 2.利用已有的库(如pillow,opencv),直接打开到一个结构体
-```
-# python code
-from PIL import Image
-im_PIL = Image.open("../img/horse.jpeg")
-im_PIL.show() #显示图片
-```
 
 ---
 # 角点描述与匹配
