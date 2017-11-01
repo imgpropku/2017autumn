@@ -24,9 +24,9 @@
 角特征 : E,F --- 不容易重复√
 
 ---
-#### Harris 角点检测---领域滑动窗口
+#### Harris 角点检测---邻域滑动窗口
 
-![](./figures/HarrisCorner.png)
+![](figures/HarrisCorner.png)
 
 ---
 # Harris 特征
