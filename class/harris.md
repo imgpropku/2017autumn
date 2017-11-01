@@ -5,8 +5,9 @@
 # 遥感数字图像处理实验课
 ## - Harris 角点检测
 <br/><br/>
-崔家梁
-(cuijialiang@pku.edu.cn2017年9月
+崔家梁  
+(cuijialiang@pku.edu.cn)  
+2017年9月
 
 ---
 # 图像匹配
@@ -26,10 +27,6 @@
 #### Harris 角点检测---领域滑动窗口
 
 ![](./figures/HarrisCorner.png)
-**二进制文件**
-
-常见的位图文件：BMP,PNG,GIF,TIFF...
-编码方式：灰度图(黑白),RGB,CMYK...
 
 ---
 # Harris 特征
@@ -37,7 +34,7 @@
 $$\small \Delta^2I=[I(x+u,y+v)-I(x,y)]^2$$
 在某片区域$D$中所有像素与与之相差向量$(u,v)$的对应点亮度之差的大小可以用下式衡量:
 $$\small E(u,v)=\sum_{(x,y)\in D} w(x,y)[I(x+u,y+v)-I(x,y)]^2$$
-其中$w(x,y)$是权重因子.
+其中$w(x,y)$是权重因子,通常取常数.
 
 ---
 #### (接上)Harris 特征
