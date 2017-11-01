@@ -71,10 +71,10 @@ $\hat{x}[k] = \sum_{n=0}^{N-1} W_N^{nk} x[n],k=0,1,...,N-1$
 ## 离散傅里叶变换(DFT)-接上页
 因此对于DFT变换有  
 $$\tiny \begin{bmatrix} \hat{x}[0] \\\ \hat{x}[1] \\\ \vdots \\\ \hat{x}[N-1]\end{bmatrix}=
-\begin{bmatrix} W_N^{0} & W_N^{0*1} & \cdots & W_N^{0*(N-1)}
-\\\ W_N^{1*0} & W_N^{1*1} & \cdots & W_N^{1*(N-1)}
+\begin{bmatrix} W_N^{0} & W_N^{0 * 1} & \cdots & W_N^{0 * (N-1)}
+\\\ W_N^{1 * 0} & W_N^{1 * 1} & \cdots & W_N^{1 * (N-1)}
 \\\ \vdots & \vdots & \ddots & \vdots
-\\\ W_N^{(N-1)*0} & W_N^{(N-1)*1} & \cdots & W_N^{(N-1)*(N-1)}
+\\\ W_N^{(N-1) * 0} & W_N^{(N-1) * 1} & \cdots & W_N^{(N-1) * (N-1)}
 \end{bmatrix}
 \begin{bmatrix} x[0] \\\ x[1] \\\ \vdots \\\ x[N-1]\end{bmatrix}$$
 
@@ -122,13 +122,13 @@ $\scriptsize h[k]=\sum_{n=0}^{N/2-1} W_{N/2}^{nk} x[2n+1]$,是$\scriptsize x[n]$
 有$g[m+4]=g[m],h[m+4]=h[m]$,则
 
 $${\begin{matrix}
-\hat{x}[0]=g[0]+W^0_8h[0] = g[0]+W^0_8h[0]\\
-\hat{x}[1]=g[1]+W^1_8h[1] = g[1]+W^1_8h[1]\\
-\hat{x}[2]=g[2]+W^2_8h[2] = g[2]+W^2_8h[2]\\
-\hat{x}[3]=g[3]+W^3_8h[3] = g[3]+W^3_8h[3]\\
-\hat{x}[4]=g[4]+W^4_8h[4] = g[0]-W^0_8h[0]\\
-\hat{x}[5]=g[5]+W^5_8h[5] = g[1]-W^1_8h[1]\\
-\hat{x}[6]=g[6]+W^6_8h[6] = g[2]-W^2_8h[2]\\
+ \hat{x}[0]=g[0]+W^0_8h[0] = g[0]+W^0_8h[0]\\\ 
+\hat{x}[1]=g[1]+W^1_8h[1] = g[1]+W^1_8h[1]\\\ 
+\hat{x}[2]=g[2]+W^2_8h[2] = g[2]+W^2_8h[2]\\\ 
+\hat{x}[3]=g[3]+W^3_8h[3] = g[3]+W^3_8h[3]\\\ 
+\hat{x}[4]=g[4]+W^4_8h[4] = g[0]-W^0_8h[0]\\\ 
+\hat{x}[5]=g[5]+W^5_8h[5] = g[1]-W^1_8h[1]\\\ 
+\hat{x}[6]=g[6]+W^6_8h[6] = g[2]-W^2_8h[2]\\\ 
 \hat{x}[7]=g[7]+W^7_8h[7] = g[3]-W^3_8h[3]
 \end{matrix}}$$
 
