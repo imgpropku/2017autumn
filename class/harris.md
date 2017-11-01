@@ -51,7 +51,10 @@ $$\begin{pmatrix}
 u & v
 \end{pmatrix}$$
 $$\begin{bmatrix}
-u & v
+u\\v
+\end{bmatrix}$$
+$$\small\begin{bmatrix}
+u \\ v
 \end{bmatrix}$$
 $\small=\begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}\begin{bmatrix}u\\v\end{bmatrix}$
 
