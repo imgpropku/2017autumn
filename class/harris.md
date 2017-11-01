@@ -56,7 +56,7 @@ u\\v
 $$\small\begin{bmatrix}
 u \\ v
 \end{bmatrix}$$
-$\small=\begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}\begin{bmatrix}u\\v\end{bmatrix}$
+$\small=\begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y \\ I_xI_y&I_y^2\end{bmatrix}\begin{bmatrix}u \\ v\end{bmatrix}$
 
 其中$I_x,I_y$分别为图像亮度在$(x,y)$处$x,y$方向上的梯度.
 
@@ -64,17 +64,17 @@ $\small=\begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2
 #### (接上)Harris 特征
 因此有:  
 $\small E(u,v)=\sum_{(x,y)\in D} w(x,y)[I(x+u,y+v)-I(x,y)]^2$  
-$\small \approx \sum_{(x,y)\in D} w(x,y)\begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}\begin{bmatrix}u\\v\end{bmatrix}$  
+$\small \approx \sum_{(x,y)\in D} w(x,y)\begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y\\ I_xI_y&I_y^2\end{bmatrix}\begin{bmatrix}u\\ v\end{bmatrix}$  
 $\small=\begin{bmatrix}u&v\end{bmatrix}
-\left(\sum_{(x,y)\in D} w(x,y) \begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}
-\right)\begin{bmatrix}u\\v\end{bmatrix}$  
+\left(\sum_{(x,y)\in D} w(x,y) \begin{bmatrix}I_x^2&I_xI_y\\ I_xI_y&I_y^2\end{bmatrix}
+\right)\begin{bmatrix}u\\ v\end{bmatrix}$  
 
-令$\small M=\sum_{(x,y)\in D} w(x,y) \begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}$
+令$\small M=\sum_{(x,y)\in D} w(x,y) \begin{bmatrix}I_x^2&I_xI_y\\ I_xI_y&I_y^2\end{bmatrix}$
 
 ---
 #### (接上)Harris 特征
 对于矩阵$M$的两个特征根$\small (\lambda_1,\lambda_2)$,
-$$\small E(u,v)=\begin{bmatrix}u&v\end{bmatrix}M\begin{bmatrix}u\\v\end{bmatrix}=u^2\lambda_1+v^2\lambda_2$$
+$$\small E(u,v)=\begin{bmatrix}u&v\end{bmatrix}M\begin{bmatrix}u\\ v\end{bmatrix}=u^2\lambda_1+v^2\lambda_2$$
 
 ![70%](http://docs.opencv.org/3.0-beta/_images/harris_region.jpg)
 $\lambda_1,\lambda_2$分别是$u,v$方向的系数.
