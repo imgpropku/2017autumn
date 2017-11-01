@@ -39,6 +39,12 @@ $$\small E(u,v)=\sum_{(x,y)\in D} w(x,y)[I(x+u,y+v)-I(x,y)]^2$$
 ---
 #### (接上)Harris 特征
 将$\small I(x+u,y+v)$在$(x,y)$处泰勒展开,取一阶近似,有:
+$$\begin{matrix}
+\Delta^2I=[I(x+u,y+v)-I(x,y)]^2 \\  
+\approx [I(x,y)+uI_x+vI_y-I(x,y)]^2 \\
+= [uI_x+vI_y]^2 \\
+=u^2I_x^2+2uI_xvI_y+v^2I_y^2 
+\end{matrix}$$
 $$\small\begin{matrix}
 \Delta^2I=[I(x+u,y+v)-I(x,y)]^2 \\  
 \approx [I(x,y)+uI_x+vI_y-I(x,y)]^2 \\
