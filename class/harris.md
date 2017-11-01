@@ -54,10 +54,10 @@ $\small=\begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y \\\ I_xI_y&I_
 $\small E(u,v)=\sum_{(x,y)\in D} w(x,y)[I(x+u,y+v)-I(x,y)]^2$  
 $\small \approx \sum_{(x,y)\in D} w(x,y)\begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y\\\ I_xI_y&I_y^2\end{bmatrix}\begin{bmatrix}u\\\ v\end{bmatrix}$  
 $\small=\begin{bmatrix}u&v\end{bmatrix}
-\left(\sum_{(x,y)\in D} w(x,y) \begin{bmatrix}I_x^2&I_xI_y\\ I_xI_y&I_y^2\end{bmatrix}
+\left(\sum_{(x,y)\in D} w(x,y) \begin{bmatrix}I_x^2&I_xI_y\\\ I_xI_y&I_y^2\end{bmatrix}
 \right)\begin{bmatrix}u\\\ v\end{bmatrix}$  
 
-令$\small M=\sum_{(x,y)\in D} w(x,y) \begin{bmatrix}I_x^2&I_xI_y\\ I_xI_y&I_y^2\end{bmatrix}$
+令$\small M=\sum_{(x,y)\in D} w(x,y) \begin{bmatrix}I_x^2&I_xI_y\\\ I_xI_y&I_y^2\end{bmatrix}$
 
 ---
 #### (接上)Harris 特征
