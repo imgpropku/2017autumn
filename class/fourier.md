@@ -16,11 +16,9 @@ https://chrome.google.com/webstore/detail/github-with-mathjax/ioemnmodlmafdkllac
 ---
 # 相关概念
 - 欧拉公式
-$$e^{ix} = cosx+isinx$$
-本节课只讨论使用$e^{ix}$的实部,因此之后的计算中记:
-$$e^{ix} = cosx$$  
+$$e^{ix} = cosx+isinx$$  
 两点需要注意的:
-- 1-它是关于0点对称
+- 1-它的实部是关于0点对称
 - 2-它是$2\pi$周期的
 
 ---
@@ -63,7 +61,7 @@ $x[n] = \frac{1}{N}\sum_{k=0}^{N-1} e^{i \frac{2\pi}{N} nk}\hat{x}[k], n=0,1,...
 对于DFT这个看起来有那么一丢丢复杂的公式:  
 $\hat{x}[k] = \sum_{n=0}^{N-1} e^{-i \frac{2\pi}{N} nk}x[n], k=0,1,...,N-1$
 
-其实,其中的$e^{-i \frac{2\pi}{N} nk}$,记$\small W_N^{nk}=e^{-i \frac{2\pi}{N} nk}=cos(\frac{2\pi}{N} nk)$  
+其实,其中的$e^{-i \frac{2\pi}{N} nk}$,记$\small W_N^{nk}=e^{-i \frac{2\pi}{N} nk}=cos(\frac{2\pi}{N} nk)+isin(\frac{2\pi}{N} nk)$  
 ### 与$x[n]$并没有任何卵关系
 
 所以上面那个公式可以写成:  
@@ -72,15 +70,17 @@ $\hat{x}[k] = \sum_{n=0}^{N-1} W_N^{nk} x[n],k=0,1,...,N-1$
 ---
 ## 离散傅里叶变换(DFT)-接上页
 因此对于DFT变换有  
-$$\tiny \begin{bmatrix} \hat{x}[0] \\ \hat{x}[1] \\ \vdots \\ \hat{x}[N-1]\end{bmatrix}=
+$$\tiny \begin{bmatrix} \hat{x}[0] \\\ \hat{x}[1] \\\ \vdots \\\ \hat{x}[N-1]\end{bmatrix}=
 \begin{bmatrix} W_N^{0} & W_N^{0*1} & \cdots & W_N^{0*(N-1)}
-\\ W_N^{1*0} & W_N^{1*1} & \cdots & W_N^{1*(N-1)}
-\\ \vdots & \vdots & \ddots & \vdots
-\\ W_N^{(N-1)*0} & W_N^{(N-1)*1} & \cdots & W_N^{(N-1)*(N-1)}
+\\\ W_N^{1*0} & W_N^{1*1} & \cdots & W_N^{1*(N-1)}
+\\\ \vdots & \vdots & \ddots & \vdots
+\\\ W_N^{(N-1)*0} & W_N^{(N-1)*1} & \cdots & W_N^{(N-1)*(N-1)}
 \end{bmatrix}
-\begin{bmatrix} x[0] \\ x[1] \\ \vdots \\ x[N-1]\end{bmatrix}$$
+\begin{bmatrix} x[0] \\\ x[1] \\\ \vdots \\\ x[N-1]\end{bmatrix}$$
 
 上面这个算式的计算复杂度是$O(N^2)$
+
+需要注意的是,计算得到的$x$序列式一个复数序列.
 
 ---
 ## 快速傅里叶变换(FFT)
@@ -92,15 +92,15 @@ $$W_N^{t}=W_N^{pN \pm t}=-W_N^{N/2+pN \pm t}, p \in Z$$
 $$\scriptsize
 \begin{bmatrix}
 W^0_4 & W^0_4 & W^0_4 & W^0_4
-\\ W^0_4 & W^1_4 & W^2_4 & W^3_4
-\\ W^0_4 & W^2_4 & W^4_4 & W^6_4
-\\ W^0_4 & W^3_4 & W^6_4 & W^9_4
+\\\ W^0_4 & W^1_4 & W^2_4 & W^3_4
+\\\ W^0_4 & W^2_4 & W^4_4 & W^6_4
+\\\ W^0_4 & W^3_4 & W^6_4 & W^9_4
 \end{bmatrix}
 =\begin{bmatrix}
 W^0_4 & W^0_4 & W^0_4 & W^0_4
-\\ W^0_4 & W^1_4 & -W^0_4 & -W^1_4
-\\ W^0_4 & -W^0_4 & W^0_4 & -W^0_4
-\\ W^0_4 & -W^1_4 & -W^0_4 & W^1_4
+\\\ W^0_4 & W^1_4 & -W^0_4 & -W^1_4
+\\\ W^0_4 & -W^0_4 & W^0_4 & -W^0_4
+\\\ W^0_4 & -W^1_4 & -W^0_4 & W^1_4
 \end{bmatrix}
 $$
 
