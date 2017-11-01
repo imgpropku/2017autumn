@@ -161,18 +161,18 @@ $f(x,y) = \dfrac{1}{MN} \sum_{u=0}^{N-1} \sum_{v=0}^{M-1} e^{i 2\pi (\frac{ux}{N
 ---
 ### 二维DFT-分离性
 $F(u,v) = \sum_{x=0}^{N-1} \sum_{y=0}^{M-1} e^{-i 2\pi (\frac{ux}
-{N}+\frac{vy}{M})}f(x,y)$
-1.先按$x$所在维度展开
-$F'(u,y) = \sum_{x=0}^{N-1} e^{-i 2\pi (\frac{ux}{N})}f(x,y)$
-2.再展开$y$所在维度
+{N}+\frac{vy}{M})}f(x,y)$  
+1.先按$x$所在维度展开  
+$F'(u,y) = \sum_{x=0}^{N-1} e^{-i 2\pi (\frac{ux}{N})}f(x,y)$  
+2.再展开$y$所在维度  
 $F(u,v)=\sum_{y=0}^{M-1} e^{-i 2\pi (\frac{vy}{M})}F'(u,y)$
 
 ---
 ### 频谱原点移动
 在数字图像处理中,通常将傅里叶变换频谱原点移动到图片的中心,以便能清楚地分析傅里叶变换的情况
 
-- 一维情况,以$k_0$为新的原点移动图像
-$$\scriptsize {\hat{x}}_{c=k_0}[k]={\hat{x}}[k-k_0] = \sum_{n=0}^{N-1} e^{-i \frac{2\pi}{N} n(k-k_0)}x[n]$$
+- 一维情况,以$k_0$为新的原点移动图像  
+$$\scriptsize {\hat{x}} _ {c=k_0}[k]={\hat{x}}[k-k_0] = \sum_{n=0}^{N-1} e^{-i \frac{2\pi}{N} n(k-k_0)}x[n]$$  
 
 - **逆变换与二维情况请自行推导!**
 
