@@ -19,8 +19,8 @@
 # 图像中的特征
 
 ![100%](http://docs.opencv.org/3.0-beta/_images/feature_building.jpg)
-面特征 : A,B --- 容易重复
-边特征 : C,D --- 容易重复
+面特征 : A,B --- 容易重复  
+边特征 : C,D --- 容易重复  
 角特征 : E,F --- 不容易重复√
 
 ---
@@ -52,7 +52,7 @@ $$\small\begin{matrix}
 #### (接上)Harris 特征
 因此有:
 $$\small\begin{matrix}
-\small E(u,v)=\sum_{(x,y)\in D} w(x,y)[I(x+u,y+v)-I(x,y)]^2\\
+E(u,v)=\sum_{(x,y)\in D} w(x,y)[I(x+u,y+v)-I(x,y)]^2\\
 \approx \sum_{(x,y)\in D} w(x,y) \begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}\begin{bmatrix}u\\v\end{bmatrix}\\
 =\begin{bmatrix}u&v\end{bmatrix}
 \left(\sum_{(x,y)\in D} w(x,y) \begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}
