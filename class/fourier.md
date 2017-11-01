@@ -107,10 +107,10 @@ $$
 ---
 # FFT-以N=8为例
 将$x[n]$分为两个序列  
-$\scriptsize\hat{x}[k] = \sum_{n=0}^{N-1} W_N^{nk} x[n]$
-$\scriptsize=\sum_{n=0,2,4,6} W_N^{nk} x[n] +\sum_{n =1,3,5,7} W_N^{nk}x[n]$
-$\scriptsize= \sum_{n=0}^{N/2-1} W_N^{2nk} x[2n] + \sum_{n=0}^{N/2-1} W_N^{(2n+1)k} x[2n+1]$
-$\scriptsize= \sum_{n=0}^{N/2-1} W_{N/2}^{nk} x[2n] + W_N^k\sum_{n=0}^{N/2-1} W_{N/2}^{nk} x[2n+1]$
+$\scriptsize\hat{x}[k] = \sum_{n=0}^{N-1} W_N^{nk} x[n]$  
+$\scriptsize=\sum_{n=0,2,4,6} W_N^{nk} x[n] +\sum_{n =1,3,5,7} W_N^{nk}x[n]$  
+$\scriptsize= \sum_{n=0}^{N/2-1} W_N^{2nk} x[2n] + \sum_{n=0}^{N/2-1} W_N^{(2n+1)k} x[2n+1]$  
+$\scriptsize= \sum_{n=0}^{N/2-1} W_{N/2}^{nk} x[2n] + W_N^k\sum_{n=0}^{N/2-1} W_{N/2}^{nk} x[2n+1]$  
 $\scriptsize= g[k]+W^k_N h[k]$  
 
 其中,  
