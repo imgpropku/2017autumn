@@ -38,32 +38,25 @@ $$\small E(u,v)=\sum_{(x,y)\in D} w(x,y)[I(x+u,y+v)-I(x,y)]^2$$
 
 ---
 #### (接上)Harris 特征
-将$\small I(x+u,y+v)$在$(x,y)$处泰勒展开,取一阶近似,有:
-$$\begin{matrix}
-\Delta^2I=[I(x+u,y+v)-I(x,y)]^2 \\  
-\approx [I(x,y)+uI_x+vI_y-I(x,y)]^2 \\
-= [uI_x+vI_y]^2 \\
-=u^2I_x^2+2uI_xvI_y+v^2I_y^2 
-\end{matrix}$$
-$$\small\begin{matrix}
-\Delta^2I=[I(x+u,y+v)-I(x,y)]^2 \\  
-\approx [I(x,y)+uI_x+vI_y-I(x,y)]^2 \\
-= [uI_x+vI_y]^2 \\
-=u^2I_x^2+2uI_xvI_y+v^2I_y^2 \\
-=\begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}\begin{bmatrix}u\\v\end{bmatrix}
-\end{matrix}$$
+将$\small I(x+u,y+v)$在$(x,y)$处泰勒展开,取一阶近似,有:  
+
+$\small\Delta^2I=[I(x+u,y+v)-I(x,y)]^2$  
+$\small\approx [I(x,y)+uI_x+vI_y-I(x,y)]^2$
+$\small= [uI_x+vI_y]^2$  
+$\small=u^2I_x^2+2uI_xvI_y+v^2I_y^2$  
+$\small=\begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}\begin{bmatrix}u\\v\end{bmatrix}$
+
 其中$I_x,I_y$分别为图像亮度在$(x,y)$处$x,y$方向上的梯度.
 
 ---
 #### (接上)Harris 特征
-因此有:
-$$\small\begin{matrix}
-E(u,v)=\sum_{(x,y)\in D} w(x,y)[I(x+u,y+v)-I(x,y)]^2\\
-\approx \sum_{(x,y)\in D} w(x,y) \begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}\begin{bmatrix}u\\v\end{bmatrix}\\
-=\begin{bmatrix}u&v\end{bmatrix}
+因此有:  
+$\small E(u,v)=\sum_{(x,y)\in D} w(x,y)[I(x+u,y+v)-I(x,y)]^2$  
+$\small \approx \sum_{(x,y)\in D} w(x,y)\begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}\begin{bmatrix}u\\v\end{bmatrix}$  
+$\small=\begin{bmatrix}u&v\end{bmatrix}
 \left(\sum_{(x,y)\in D} w(x,y) \begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}
-\right)\begin{bmatrix}u\\v\end{bmatrix}
-\end{matrix}$$
+\right)\begin{bmatrix}u\\v\end{bmatrix}$  
+
 令$\small M=\sum_{(x,y)\in D} w(x,y) \begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}$
 
 ---
