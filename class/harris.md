@@ -44,6 +44,15 @@ $\small\Delta^2I=[I(x+u,y+v)-I(x,y)]^2$
 $\small\approx [I(x,y)+uI_x+vI_y-I(x,y)]^2$
 $\small= [uI_x+vI_y]^2$  
 $\small=u^2I_x^2+2uI_xvI_y+v^2I_y^2$  
+$$\begin{matrix}
+u & v
+\end{matrix}$$
+$$\begin{pmatrix}
+u & v
+\end{pmatrix}$$
+$$\begin{bmatrix}
+u & v
+\end{bmatrix}$$
 $\small=\begin{bmatrix}u&v\end{bmatrix}\begin{bmatrix}I_x^2&I_xI_y\\I_xI_y&I_y^2\end{bmatrix}\begin{bmatrix}u\\v\end{bmatrix}$
 
 其中$I_x,I_y$分别为图像亮度在$(x,y)$处$x,y$方向上的梯度.
