@@ -65,6 +65,14 @@ http://cmm.ensmp.fr/~beucher/wtshed.html
 http://cmm.ensmp.fr/~beucher/publi/P-Algorithm_SB_BM.pdf
 
 ---
+# 作业
+- 打开一张黑白图片;
+- 实现一种图像分割(可以调用库);
+- 显示分割结果;
+
+12.20日(下周三)10:00前交至cuijialiang@pku.edu.cn
+
+---
 
 # References  
 - CMM的分水岭介绍 http://cmm.ensmp.fr/~beucher/wtshed.html
